@@ -12,7 +12,7 @@ def test_form_submission():
     driver.find_element(By.NAME, "custname").send_keys("Сергей")
 
     # Находим и нажимаем кнопку Submit
-    driver.find_element(By.XPATH, "//button[text()='Submit']").click()
+    driver.find_element(By.XPATH, "//button[contains(text(), 'Submit')]").click()
 
     # Проверяем, что URL изменился
     assert driver.current_url != url_before
